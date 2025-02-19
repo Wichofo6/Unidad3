@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    jugar = "SI"
+    while(jugar == "SI")  {
+        function getRandomInt(max) {    
+        return Math.floor(Math.random() * 9)+1;
+        }
+        var numeroRandom = getRandomInt(9)
+        //alert("numeroRandom"+numeroRandom)
+
+        var numeroPersona = prompt("Ingrese un numero entre 3 y 6:")
+       
+        
+        while (numeroPersona<3 || numeroPersona>6){
+            numeroPersona = prompt("ingrese nuevamente un numero, debe ser entre 3 y 6")
+        }
+        
+        var decision = prompt("Indique si su numero es mayor, menor o igual al que genero la maquina")
+        
+        if (decision == "mayor"){
+            if ( numeroPersona > numeroRandom)
+                resultado = "Ha adivinado"
+            else {
+                resultado = "No ha adivinado, mejor suerte a la proxima"
+            }
+        }else if (decision == "menor"){
+            if ( numeroPersona < numeroRandom)
+                resultado = "Ha adivinado"
+            else {
+                resultado = "No ha adivinado, mejor suerte a la proxima"
+            }
+        }else if (decision == "igual"){
+            if ( numeroPersona == numeroRandom)
+                resultado = "Ha adivinado"
+            else {
+                resultado = "No ha adivinado, mejor suerte a la proxima"
+            }
+        } 
+        alert("El valor maquina es: "+ numeroRandom + ".\n" + "El valor ingresado por el usuario es: "+numeroPersona +".\n"+ "Su elección: " + decision +".\n" + resultado)
+        if (jugar == "SI"){
+            jugar = prompt("desea jugar nuevamente SI/NO")
+        }else{
+            
+        }
+    }alert("Estudiante: Luis Chinchilla \nCarnet: 12002505")
+    </script>
+</body>
+</html>
